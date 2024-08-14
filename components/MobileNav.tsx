@@ -7,7 +7,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { IoReorderThree } from "react-icons/io5";
-import { Link } from "lucide-react";
+import Link  from "next/link";
 import { SlCamrecorder } from "react-icons/sl";
 import { sidebarLinks } from "../constants/index";
 import { usePathname } from "next/navigation";
@@ -20,12 +20,12 @@ function MobileNav() {
     <section className="w-full max-w-[264px]">
       <Sheet>
         <SheetTrigger>
-          <IoReorderThree className="text-[36px] sm:hidden" />
+          <IoReorderThree className="text-[36px] sm:hidden" color="white" />
         </SheetTrigger>
         <SheetContent side="left" className="border-none bg-dark-1">
           <Link href="/" className="flex items-center gap-2">
-            {/* <SlCamrecorder className="text-[32px]" /> */}
-            <p className="text-[26px] text-green-950">Yoom zzom</p>
+            <SlCamrecorder className="text-[32px]" />
+            <p className="text-[26px] text-white">Yoom</p>
           </Link>
 
           <div

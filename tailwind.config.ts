@@ -1,30 +1,45 @@
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
 
 const config = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-	],
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   prefix: "",
   theme: {
     container: {
       center: true,
       padding: "2rem",
       screens: {
-        "2xl": "1400px",
+        sm: "640px",
+        md: "768px",
+        lg: "968px",
+        xl: "1300px",
       },
     },
     extend: {
       colors: {
-        dark:{
-          1: '#1C1F2E',
-          2: '#161925'
+        dark: {
+          1: "#1C1F2E",
+          2: "#161925",
         },
-        blue:{
-          1:"#0E78F9"
+        blue: {
+          1: "#0E78F9",
+        },
+        sky: {
+          1: "#C9DDFF"
+        },
+        orange: {
+          1: "#FF742E"
+        },
+        purple: {
+          1: "#830EF9"
+        },
+        yellow: {
+          1: "#F9A90E"
         },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -60,6 +75,9 @@ const config = {
           foreground: "hsl(var(--card-foreground))",
         },
       },
+      backgroundImage: {
+        hero: "url('/images/pexels-danielabsi-952670.jpg')",
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
@@ -82,6 +100,6 @@ const config = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config
+} satisfies Config;
 
-export default config
+export default config;
